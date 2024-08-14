@@ -105,4 +105,17 @@ SELECT * FROM SalesLT.Product WHERE COLOR IN ('BLACK','BLUE', 'SILVER');
 --17 NOT IN
 SELECT * FROM SalesLT.Product WHERE COLOR NOT IN ('BLACK','BLUE');
 
+--18 BETWEEN
+SELECT * FROM SalesLT.Product WHERE ListPrice BETWEEN 500 AND 600 ORDER BY ListPrice DESC;
+
+--19 NOT BETWEEN 
+SELECT * FROM SalesLT.Product WHERE ListPrice NOT BETWEEN 500 AND 600;
+
+--20 ALIAS
+SELECT Name AS 'Product Name' FROM SalesLT.Product WHERE ListPrice > 500 AND Color ='Black'; 
+-- AS is optional Since both the queries works
+SELECT Name 'Product Name' FROM SalesLT.Product WHERE ListPrice > 500 AND Color ='Black'; 
+
+--Joins
+
 
